@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Question2.Properties
+namespace Question__4.Properties
 {
 
 
