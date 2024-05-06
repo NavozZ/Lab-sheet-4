@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Question1
+namespace Question2
 {
     public partial class Form1 : Form
     {
@@ -18,27 +17,63 @@ namespace Question1
             InitializeComponent();
         }
 
-        private void Num1_TextChanged(object sender, EventArgs e)
+        private void LabelOperation_Click(object sender, EventArgs e)
+        {
+            double num1 = double.Parse(Num1.Text);
+            double num2 = double.Parse(Num2.Text);
+
+            // Get the selected operation based on radio button state
+            string operation = "";
+            if (radioButtonAdd.Checked)
+            {
+                operation = "+";
+            }
+            else if (radioButtonSubtract.Checked)
+            {
+                operation = "-";
+            }
+            else if (radioButtonMultiply.Checked)
+            {
+                operation = "*";
+            }
+            else if (radioButtonDivide.Checked)
+            {
+                operation = "/";
+            }
+            else
+            {
+                MessageBox.Show("Please select an operation.");
+                return;  // Exit if no operation is selected
+            }
+
+            // Perform calculation based on operation
+            double result = 0;
+            switch (operation)
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 == 0)
+                    {
+                        MessageBox.Show("Division by zero is not allowed.");
+                    }
+                    else
+                    {
+                        result = num1 / num2;
+                    }
+                    break;
+            }
+    }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            double num1 = Convert.ToDouble(Num1.Text);
-            double num2 = Convert.ToDouble(Num2.Text);
-
-            // Calculate the sum
-            double sum = num1 + num2;
-
-            // Update the label text with the sum
-            SumLabel.Text = "Sum: " + sum.ToString();
-            SumLabel.Text = $"Addition: {sum}";
         }
     }
-}

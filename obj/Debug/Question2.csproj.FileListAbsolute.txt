@@ -1,0 +1,5 @@
+C:\Users\navod\Downloads\C# Lab\Lab4\Lab4\Question2\obj\Debug\Question2.csproj.AssemblyReference.cache
+C:\Users\navod\Downloads\C# Lab\Lab4\Lab4\Question2\obj\Debug\Question2.Form1.resources
+C:\Users\navod\Downloads\C# Lab\Lab4\Lab4\Question2\obj\Debug\Question2.Properties.Resources.resources
+C:\Users\navod\Downloads\C# Lab\Lab4\Lab4\Question2\obj\Debug\Question2.csproj.GenerateResource.cache
+C:\Users\navod\Downloads\C# Lab\Lab4\Lab4\Question2\obj\Debug\Question2.csproj.CoreCompileInputs.cache
